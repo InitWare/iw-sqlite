@@ -10,3 +10,4 @@ target_compile_definitions(iw-sqlite PRIVATE SQLITE_ENABLE_JSON1=1
     SQLITE_OMIT_SHARED_CACHE
     SQLITE_USE_ALLOCA)
 target_include_directories(iw-sqlite PUBLIC .)
+target_link_libraries(iw-sqlite INTERFACE Threads::Threads ${CMAKE_DL_LIBS})
